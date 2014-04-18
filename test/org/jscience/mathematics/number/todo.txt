@@ -1,0 +1,23 @@
+real complex tests
+Real.valueOf("1.2E3±1E-2")
+bugs
+
+Evtl:. LargeInteger._words should be modulo
+1000000000000000000 instead of 2**63 ==
+9223372036854775808
+Or better: words should be int modulo 1000000000 .
+
+LargeInteger.modPow, modInverse
+
+Real Stuff:
+
+Real:
+https://jscience.dev.java.net/issues/show_bug.cgi?id=64
+: XML geht nicht für ERROR.
+
+Precision of Real
+https://jscience.dev.java.net/issues/show_bug.cgi?id=71
+
+
+https://jscience.dev.java.net/issues/show_bug.cgi?id=98
+scheint gefixt zu sein.
