@@ -92,7 +92,12 @@ public final class RationalConverter extends UnitConverter {
             double divisorDouble = ((double)this._divisor) * that._divisor;
             if ((dividendLong != dividendDouble) || 
                     (divisorLong != divisorDouble)) { // Long overflows.
-                return new MultiplyConverter(dividendDouble / divisorDouble);
+                double ratio = dividendDouble / divisorDouble;
+                if(ratio == 1){
+                    // Otherwise it will throw an exception
+                    return MultiplyConverter.IDENTITY;
+                }
+                return new MultiplyConverter(ratio);
             }
             long gcd = gcd(dividendLong, divisorLong);
             return RationalConverter.valueOf(dividendLong / gcd, divisorLong / gcd);
