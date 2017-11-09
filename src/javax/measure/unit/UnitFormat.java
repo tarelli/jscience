@@ -936,5 +936,6 @@ public abstract class UnitFormat extends Format {
             DEFAULT.label(NonSI.GALLON_UK, "gal");
             DEFAULT.label(NonSI.OUNCE_LIQUID_UK, "oz");
         }
+        DEFAULT.label(NonSI.KILOWATT_HOUR, "kWh");
     }
 }

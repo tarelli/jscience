@@ -11,7 +11,7 @@
     	<tstamp/>
         <property name="library"   value="jscience" />
         <property name="version"   value="4.3" />
-        <property name="release"   value="1" />
+        <property name="release"   value="4-Isetic" />
         <property name="src"       value="src" />
         <property name="bin"       value="bin" />
         <property name="lib"       value="lib" />
@@ -26,7 +26,7 @@
         <mkdir dir="${bin}" />
 
 		<!-- Compile -->
-        <javac srcdir="${src}" destdir="${bin}" classpath="${classpath}" target="1.5" source="1.5"
+        <javac srcdir="${src}" destdir="${bin}" classpath="${classpath}" target="1.6" source="1.6"
                debug="${debug}" optimize="${optimize}" encoding="${encoding}">
         	<!-- <compilerarg  value="-Xlint"/> -->
         </javac>	
@@ -36,7 +36,7 @@
         <filter token="VERSION" value="${version}.${release} ${TODAY}"/>
         <copy file="src/org/jscience/JScience.java"
               todir="${bin}/org/jscience" filtering="true"/>
-        <javac srcdir="${bin}" destdir="${bin}" classpath="${classpath}" target="1.5" source="1.5"
+        <javac srcdir="${bin}" destdir="${bin}" classpath="${classpath}" target="1.6" source="1.6"
                debug="${debug}" optimize="${optimize}" encoding="${encoding}"/> 
 
 		<!-- Copies resources if any -->
